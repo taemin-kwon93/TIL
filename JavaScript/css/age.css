@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+}
+/*버튼에 따른 설정이 적용된다.
+사용시 코드를 아래와 적어주면 된다.
+ <button class="btn" onclick="calc()">
+ class="btn"이 해당하는 부분이다.*/
+.btn {
+    margin-top: 50px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #007bff;
+    text-align: center;
+    vertical-align: center;
+    border: 1px solid blue;
+    padding: 5px;       
+}
+/*버튼 위에 마우스를 올려놓으면 아래 설정이 적용된다.*/
+.btn:hover {
+    color: #fff;
+    background-color: aquamarine;
+    border-color: aquamarine;
+}
+.show {
+    margin-top: 50px;
+    padding: 20px 30px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
