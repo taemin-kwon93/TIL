@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>조건문-3</title>
+</head>
+<body>
+    <script>
+        //사용자로 부터 값을 입력받음.
+        var userID = window.prompt("ID를 입력하세요.");
+        var userPW = window.prompt("PW를 입력하세요.");
+
+        if( (userID == "kwon") && (userPW == "11") ){
+            alert(userID + "님, 안녕하세요.");
+        }
+        else if( userID == "kwon"){
+            alert("비밀번호가 틀렸습니다.");
+        }
+        else{
+            alert("아이디가 잘못됐습니다.");
+        }
+    </script>    
+</body>
+</html>

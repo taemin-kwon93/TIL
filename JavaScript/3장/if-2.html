@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>조건문-2</title>
+</head>
+<body>
+    <script>
+        //사용자로 부터 값을 입력받음.
+        var value = window.prompt("양의 정수를 입력하세요.");
+        //prompt 입력받은 값 변환하기(String -> Int)
+        value = parseInt(value);
+
+        if(value % 2 == 0){
+            alert(value + "는 2의 배수");
+        }
+        else{
+            alert(value + "는 2의 배수가 아님.");
+        }
+    </script>    
+</body>
+</html>
