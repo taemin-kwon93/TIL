@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문-6</title>
+</head>
+<body>
+    <script>
+        //사용자로부터 입력받는 부분
+        var score = window.prompt("점수를 입력하세요.");
+        
+        //입력 받은 값을 정수형으로 변환
+        score = parseInt(score);
+
+        //조건문 작성
+        if( (score >= 90) && (score <= 100) ){
+            document.write("A학점");
+        }
+        else if( (score >= 80) && (score < 90) ){
+            document.write("B학점");
+        }        
+        else if( (score >= 70) && (score < 80) ){
+            document.write("C학점");
+        }
+        else if( (score >= 0) && (score < 70) ){
+            document.write("D학점");
+        }
+        else {
+            document.write("F!!!!!");
+        }
+    </script>
+    
+</body>
+</html>

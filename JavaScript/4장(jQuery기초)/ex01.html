@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트로 색상 바꾸기</title>
+</head>
+<body>
+    <div>
+        <ul class="menu" id="menu">
+            <li>김밥</li>
+            <li>비빔밥</li>
+            <li>제육덮밥</li>
+            <li>오징어덮밥</li>
+            <li>돌솥밥</li>
+        </ul>
+        <ul class="menu" id="menu2">
+            <li>자라탕</li>
+            <li>감자탕</li>
+            <li>오리탕</li>
+            <li>닭백숙</li>
+            <li>추어탕</li>
+        </ul>
+        <script>
+            window.onload = function(){
+                //아이디 선택자 'menu2'를 저장함.
+                var menu2 = document.getElementById("menu2");
+                //menu2 밑 li태그들을 배열로 저장.
+                var liArrays = menu2.getElementsByTagName("li");
+
+                for (i = 0; i<liArrays.length; i++){
+                    var li = liArrays[i];
+                    li.style.color = "skyblue";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
