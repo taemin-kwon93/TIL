@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+        var name = "global";//전역변수
+        
+        function func1(){
+            var name = "local1";//지역변수
+            document.write(name + " = name test <br/>");
+        }
+        function func2(){
+            var name = "local2";
+            document.write(name + " = name test <br/>");
+        }
+        function func3(){
+            name = "local3";//함수 밖에 선언한 name 변수의 값을 덮는다.
+            document.write(name + " = name test <br/>");
+        }
+
+        document.write(name + " = name test, 출력테스트 시작점 <br/>");
+
+        func1();//지역변수 사용.
+        func2();//지역변수 사용.
+        document.write(name + " = name test, func2() 끝난 후. <br/>");
+
+        func3();//값을 local3로 덮었으니, 함수가 끝난 뒤에도 name은 'local3'이다.
+        document.write(name + " = name test, func3()가 끝난 후 name값이 바뀜 <br/>");
+
+        func2();
+        document.write(name +  "func2() 끝난 후<br/>");
+    </script>
+</body>
+</html>
