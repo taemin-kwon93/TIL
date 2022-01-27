@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩함수</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        function hi(){
+            //중첩함수 hello를 만듬.
+            function hello(name){
+                document.write(name + "님, 안녕하세요.");
+            }
+            return hello; //중첩함수를 리턴
+            //return "hello" -> 문자를 리턴
+        }
+        //hi() 함수의 리턴값인, 중첩함수 hello를 넘겨준다. 
+        var func = hi();
+        func("태민");//hello("태민"); 과 같음.
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리턴값 함수</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            function hi1(){
+                document.write("<p id='fhi2'>안녕하세요</p>");
+            }
+            //hi함수의 리턴값이 출력된다.
+            $("#btnStart").on("mouseover focus", hi1);
+        });
+    </script>
+</head>
+<body>
+    <button id="btnStart">시작</button>
+</body>
+</html>

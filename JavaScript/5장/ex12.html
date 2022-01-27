@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트(jQuery이용)</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        //세가지 방법 각각의 결과는 같음.
+        //방법 1, 가장 보편적.
+        //mouseover와 focus 2개의 이벤트가 담겨져있음.
+        $(document).ready(function(){
+            $("#btn").on("mouseover focus", function(){
+                console.log("이벤트 확인");
+            });
+        });
+        //방법 2
+        /*$(document).ready(function(){
+            $("#btn").on({
+                "mouseover focus" : function(){
+                    console.log("이벤트 확인2");
+                }
+            });
+        });*/
+        //방법 3
+        /* $(document).ready(function(){
+            $("#btn").on({
+                "mouseover":  function(){
+                    console.log("이벤트 확인");
+                },
+                "focus" : function(){
+                    console.log("이벤트 확인3");
+                }
+                });
+            });*/
+    </script>    
+</head>
+<body>
+    <button id="btn">버튼</button>
+</body>
+</html>

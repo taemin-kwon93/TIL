@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트(jQuery이용)</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        //ready에는 값이 0으로 찍히고 load에는 값이 500으로 찍힌다.
+        //해당 예제는 jQuery라이브러리 문제로 인해 load에서 콘솔을 찍을때 문제가 있다.
+        $(function(){
+            $(document).ready(function(){
+                var h = $(".img").height();
+                console.log(h + " : h의 값, read()");
+            });
+
+            $(window).load(function(){
+                var h = $(".img").height();
+                console.log(h + " : h의 값, load()");
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="https://place-hold.it/500X500" class="img">
+</body>
+</html>
