@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculator1(op, num1, num2){
+            //로직 구현(연산)
+            var result = "";
+
+            switch(op){
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+                default : 
+                    result = "지원되지 않는 연산입니다.";
+            }
+            //처리(출력역할)
+            return document.write("주어진 수의 연산결과 : " + result + "<br/>");
+        }
+
+        function calculator2(op, num1, num2){
+            //로직 구현(연산)
+            var result = "";
+
+            switch(op){
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+                default : 
+                    result = "지원되지 않는 연산입니다.";
+            }
+            //처리(출력역할)
+            return document.write("정답 : " + result + "<br/>");
+        }
+        /*return 형태와 callback 형태의 비교를 위한 예제다.
+        return값을 활용해 출력할때는 구현(로직)부가 각 함수마다 붙어야한다.
+        calculator1에도 calculator2에도 같은 구현을 위한 로직이 붙어있다.*/
+        calculator1('+', 300, 200);
+        calculator2('+', 300, 200);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

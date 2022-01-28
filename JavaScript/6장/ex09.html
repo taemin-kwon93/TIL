@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩함수 사칙연산</title>
+    <script>
+        function calculator(op, num1, num2){
+            var result="";
+            
+            switch(op){
+                case '+':
+                    result = add(num1, num2);
+                    break;
+                case '-':
+                    result = sub(num1, num2);
+                    break;
+                case '*':
+                    result = mul(num1, num2);
+                    break;
+                case '/':
+                    result = div(num1, num2);
+                    break;
+                default : 
+                    result = "지원되지 않는 연산입니다.";
+            }
+            //중첩함수를 이용해 switch에서 사용될 함수들을 만든다.
+            function add(num1, num2){
+                return num1 + num2;
+            }
+            function sub(num1, num2){
+                return num1 - num2;
+            }
+            function mul(num1, num2){
+                return num1 * num2;
+            }
+            function div(num1, num2){
+                return num1 / num2;
+            }
+
+            return result;
+        }
+        var op = prompt("처리하고싶은 연산을 입력해주세요. +, -, *, /");
+        var num1 = parseInt(prompt("수를 입력해주세요."));
+        var num2 = parseInt(prompt("수를 입력해주세요."));
+        document.write("결과 : " + calculator(op, num1, num2) + "<br/>");
+        // document.write("결과 : " + calculator('-', 200, 300) + "<br/>");
+        // document.write("결과 : " + calculator('*', 200, 300) + "<br/>");
+        // document.write("결과 : " + calculator('/', 200, 300) + "<br/>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

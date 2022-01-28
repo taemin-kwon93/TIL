@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체방식 함수정의, 익명함수 확장의 정의</title>
+    <script>
+        //객체방식, 실무에서 잘 활용되지는 않지만 이런 방법이 있다는 정도는 기억하자!
+        var hi = new Function("name", "document.write(name +'님 안녕하세요.<br/>')");
+        hi(prompt("이름을 입력하세요."));//이름 입력받아 출력하기.
+
+        //익명함수 확장으로 함수 정의
+        //재사용 목적이 아님. 다른 함수와의 충돌을 막기 위해 사용됨.
+        (function(name){
+            document.write(name + "님 환영합니다.");
+        })("태민")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

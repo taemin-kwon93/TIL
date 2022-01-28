@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+    <script>
+        var result = "";
+
+        function calculator(op, num1, num2, callback){
+            switch(op){
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-": 
+                    result = num1 - num2;
+                    break;
+                case "*": 
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                default : 
+                    result = "지원하지 않는 연산입니다.";
+            }
+            callback(result);
+        }
+
+        function print1(result){
+            document.write("결과1 : " + result + "<br/>");
+        }
+        function print2(result){
+            document.write("결과2 : " + result + "<br/>");
+        }
+        function print3(result){
+            document.write("결과3 : " + result + "<br/>");
+        }
+        
+        calculator("+", 3, 3, print1);
+        calculator("+", 3, 3, print2);
+        calculator("+", 3, 3, print3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
