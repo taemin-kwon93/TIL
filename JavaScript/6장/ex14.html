@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수-4(일반함수 풀이)</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            checkCount();
+        });
+
+        function checkCount(){
+            var count = 0;
+            $("#btnStart").click(function(){
+                count++;
+                if(count%5 == 0){
+                    alert("완료됐습니다.");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <button id="btnStart">시작버튼</button>
+</body>
+</html>

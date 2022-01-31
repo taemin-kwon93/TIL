@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저 함수</title>
+    <script>
+        function createCounter(){
+            var cnt = 0;
+
+            function add(){
+                cnt++;
+                return cnt;
+            }
+            return add;
+        }
+
+        var counter = createCounter();
+        document.write("1번째 값: " + counter() + "<br/>");
+        document.write("2번째 값: " + counter() + "<br/>");
+        document.write("3번째 값: " + counter() + "<br/>");
+        document.write("4번째 값: " + counter() + "<br/>");
+        document.write("5번째 값: " + counter() + "<br/>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

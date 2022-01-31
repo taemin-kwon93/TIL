@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저 함수2</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnStart").click(function(){
+                start();
+                document.write("시작합니다. <br/>");
+        });
+
+        function start(){
+            var cnt = 0;
+            setInterval(function(){
+                cnt++;
+                document.write("◾ ");
+                if(cnt%5 == 0){
+                    document.write("<br/>");
+                }
+            }, 1000);
+        }
+    });
+    </script>
+</head>
+<body>
+    <button id="btnStart">시작버튼</button>
+</body>
+</html>
