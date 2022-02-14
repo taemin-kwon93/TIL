@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array클래스(배열요소 첫번째, 마지막, n번째 삭제하기)</title>
+    <script>
+        var menus = ["menu1", "menu2", "menu3", "menu4"];
+        document.write("실행 전 : " + menus.join(",") + "<br/>");
+
+        //shift는 배열 맨 처음 부분에 요소를 삭제함.
+        menus.shift("menu0");
+        document.write("shift실행 : " + menus.join(",") + "<br/>");
+
+        //push()는 배열 마지막에 요소를 삭제함.
+        menus.pop("menu5");
+        document.write("push실행 : " + menus.join(",") + "<br/>");
+
+        //splice(x, y) x인덱스 부터 y만큼 (Array<String>)<String>을 지움.
+        menus.splice(0, 1);//menus[0]에서 1개를 삭제.
+        document.write("splice실행 : " + menus.join(",") + "<br/>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
