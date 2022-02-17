@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 다루기-each()</title>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".container li").each(function(index){
+                document.write("index값 : " + index + "<br/>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul class="container">
+        <li>권태민</li>
+        <li>린린</li>
+        <li>오징어땅콩</li>
+        <li>썬칩</li>
+        <li>포테이토</li>
+    </ul>
+</body>
+</html>
