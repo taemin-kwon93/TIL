@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 생성 - jQuery이용2</title>
+    <style>
+        body {
+            font-size: 15px;
+            font-family: "맑은 고딕";
+        }
+        ul, li {
+            border: 3px solid gray;
+            margin: 10px;
+        }
+
+        ul {
+            padding: 10px;
+        }
+
+        li.select {
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var cnt = 6;
+            $("#btnAdd").click(function(){
+                var $li = $("<li>메뉴" + cnt + "</li>");
+                cnt++;
+
+                /*
+                ul태그(id="menu")에 li태그를 추가하는 방법들이다.
+                $("#menu").prepend("<li>메뉴" + cnt + "</li>");
+                $("#menu").append("<li>메뉴" + cnt + "</li>");
+                $("#menu").prepend($li);
+                $("#menu").append($li);
+                $($li).prependTo("#menu");
+                $($li).appendTo("#menu");
+                $li.insertBefore("#menu li:first");
+                $li.insertBefore("#menu li:last");
+                */
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btnAdd">추가하기</button>
+    <ul id="menu">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li class="select">메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+</body>
+</html>
