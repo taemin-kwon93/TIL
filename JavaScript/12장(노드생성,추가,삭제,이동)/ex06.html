@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드 생성 - jQuery이용6</title>
+    <style>
+        body {
+            font-size: 15px;
+            font-family: "맑은 고딕";
+        }
+        ul, li {
+            border: 3px solid gray;
+            margin: 10px;
+        }
+
+        ul {
+            padding: 10px;
+        }
+
+        li.select {
+            background-color: aquamarine;
+        }
+    </style>
+    <script src="libs/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var $menu = $("#menu");
+            var cnt = 0;
+            
+            $("#btnAdd").click(function(){
+                cnt++;
+                var $li = $("<li>추가메뉴" + cnt + "</li>");
+                $menu.append($li);
+            });
+            
+            /*
+            class=select인 li태그를 제외하고 삭제하기
+            $("#menu li").click(function(){
+                if($(this).hasClass("select")){
+                    return;
+                }
+                $(this).remove();
+            });
+            */
+
+            /*
+            [0]포함, 짝수 인덱스 삭제하기 
+            $("#menu li").click(function(){
+                if($(this).hasClass("select")){
+                    return;
+                }
+                $("#menu li:even").remove();
+            });
+            */
+
+            /*홀수 인덱스 삭제하기 */
+            $("#menu li").click(function(){
+                if($(this).hasClass("select")){
+                    return;
+                }
+                $("#menu li:odd").remove();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btnAdd">추가하기</button>
+    <ul id="menu">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+        <li class="select">메뉴5</li>
+        <li>메뉴6</li>
+    </ul>
+</body>
+</html>
