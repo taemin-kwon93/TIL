@@ -21,9 +21,9 @@ public class Main80 {
 		int sum = 0;
 
 		
-		for(int i=1; sum<=x; i++) {
+		for(int i=1; sum<x; i++) {
 			sum += i;
-			count = i;
+			count++; 
 		}
 		
 		System.out.println(count);
