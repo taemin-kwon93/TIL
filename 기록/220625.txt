@@ -1,0 +1,11 @@
+기술면접 완료.
+복기.
+
+1. 기존 focus프로젝트에서 예외처리, Read작업, Update작업, Delete작업 해보기
+(CRUD는 이전에 했던 자료 있으니 찾아볼것.)
+
+2. AWS Lambd는 LRP(Long Running Process)에 적합하지 않다.
+Lambda 함수 실행시간이 15초한정일 경우, 15초를 초과하는 처리는 완료되지 못 할것이다.
+
+3. Spring, 순수 Java코드, Javascript코드 등등 각각이 Lambda에 담겨있을 때, 다른 성능을 보일 것이다.
+(추후 직접 테스트 해보고 내용을 정리해보자.)
